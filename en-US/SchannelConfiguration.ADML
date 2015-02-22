@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+	<displayName>Protocol and Cipher Suites</displayName>
+	<description>This policy provides configuration to Server Protocol and Cipher suites</description>
+	<resources>
+		<stringTable>
+			<string id="SCHANNEL_POLICY">SChannel Configuration Settings</string>
+			<string id="CIPHERS">Cipher Suites</string>
+			<string id="HASHES">Hashes</string>
+			<string id="KEY_EXCHANGE_ALGORITHMS">Key Exchange Algorithms</string>
+			<string id="PROTOCOLS">Protocols</string>
+			<string id="SCHANNEL_LOGGING">SChannel Logging</string>
+						
+			<string id="Hashes">Sets the supported hashes</string>
+			<string id="KeyExchangeAlgorithms">Sets the supported Key Exchange Algorithms</string>
+			<string id="Protocols_Combo">Sets the supported Protocols</string>
+			<string id="SChannelLogging_Dropdown">Select the appropriate Schannel logging</string>
+			
+			<string id="CIPHER_AES_128_128">Enable AES 128/128</string>
+			<string id="CIPHER_AES_128_128_Help"></string>
+			<string id="CIPHER_AES_256_256">Enable AES 256/256</string>
+			<string id="CIPHER_AES_256_256_Help"></string>
+			<string id="CIPHER_DES_56_56">Enable DES 56/56</string>
+			<string id="CIPHER_DES_56_56_Help"></string>
+			<string id="CIPHER_NULL">Enable NULL</string>
+			<string id="CIPHER_NULL_Help"></string>
+			<string id="CIPHER_RC2_128_128">Enable RC2 128/128</string>
+			<string id="CIPHER_RC2_128_128_Help"></string>
+			<string id="CIPHER_RC2_40_128">Enable RC2 40/128</string>
+			<string id="CIPHER_RC2_40_128_Help"></string>
+			<string id="CIPHER_RC2_56_128">Enable RC2 56/128</string>
+			<string id="CIPHER_RC2_56_128_Help"></string>
+			<string id="CIPHER_RC4_128_128">Enable RC4 128/128</string>
+			<string id="CIPHER_RC4_128_128_Help"></string>
+			<string id="CIPHER_RC4_40_128">Enable RC4 40/128</string>
+			<string id="CIPHER_RC4_40_128_Help"></string>
+			<string id="CIPHER_RC4_56_128">Enable RC4 54/128</string>
+			<string id="CIPHER_RC4_56_128_Help"></string>
+			<string id="CIPHER_RC4_64_128">Enable RC4 64/128</string>
+			<string id="CIPHER_RC4_64_128_Help"></string>
+			<string id="CIPHER_TRIPLE_DES_168_168">Enable Triple DES 168/168</string>
+			<string id="CIPHER_TRIPLE_DES_168_168_Help"></string>
+			<string id="HASH_MD5">Enable the MD5 Hash</string>
+			<string id="HASH_MD5_Help"></string>
+			<string id="HASH_SHA">Enable the SHA Hash</string>
+			<string id="HASH_SHA_Help"></string>
+			<string id="HASH_SHA_256">Enable the SHA256 Hash</string>
+			<string id="HASH_SHA_256_Help"></string>
+			<string id="HASH_SHA_384">Enable the SHA384 Hash</string>
+			<string id="HASH_SHA_384_Help"></string>
+			<string id="HASH_SHA_512">Enable the SHA512 Hash</string>
+			<string id="HASH_SHA_512_Help"></string>
+			<string id="KEA_Diffie-Hellman">Enable Diffie-Hellman</string> 
+			<string id="KEA_Diffie-Hellman_Help"></string> 
+			<string id="KEA_ECDH">Enable Elliptic curve Diffie-Hellman</string>
+			<string id="KEA_ECDH_Help"></string>
+			<string id="KEA_PKCS">Enable public-key cryptography standards</string>
+			<string id="KEA_PKCS_Help"></string>
+			<string id="PROTO_MULTI_PROTOCOL_UNIFIED">Enable Multi-Protocol Unified Hello</string>
+			<string id="PROTO_MULTI_PROTOCOL_UNIFIED_Help"></string>
+			<string id="PROTO_PCT_1_0">Enable Private Communications Technology (PCT) 1.0</string>
+			<string id="PROTO_PCT_1_0_Help"></string>
+			<string id="PROTO_SSL_2_0">Secure Sockets Layer (SSL) 2.0</string>
+			<string id="PROTO_SSL_2_0_Help"></string>
+			<string id="PROTO_SSL_3_0">Secure Sockets Layer (SSL) 3.0</string>
+			<string id="PROTO_SSL_3_0_Help"></string>
+			<string id="PROTO_TLS_1_0">Transport Layer Security (TLS) 1.0</string>
+			<string id="PROTO_TLS_1_0_Help"></string>
+			<string id="PROTO_TLS_1_1">Transport Layer Security (TLS) 1.1</string>
+			<string id="PROTO_TLS_1_1_Help"></string>
+			<string id="PROTO_TLS_1_2">Transport Layer Security (TLS) 1.2</string>
+			<string id="PROTO_TLS_1_2_Help"></string>
+			<string id="SCHANNEL_LOGGING_Help"></string>
+			<string id="Schannel_DropDownList_NoLogging">Do not log</string>
+			<string id="Schannel_DropDownList_ErrorLogging">Log error messages</string>
+			<string id="Schannel_DropDownList_WarnLogging">Log warnings</string>
+			<string id="Schannel_DropDownList_InfoLogging">Log informational and success events</string>
+		</stringTable>
+		<presentationTable>
+		  <presentation id="SchannelDropDownList">
+			<dropdownList refId="SChannel_DropDownList_Box" noSort="false" defaultItem="1">Select the Schannel Logging Level</dropdownList>
+		  </presentation>
+		</presentationTable>
+	</resources>
+</policyDefinitionResources>

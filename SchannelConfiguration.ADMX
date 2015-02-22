@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+	<policyNamespaces>
+		<target prefix="protocolcipher" namespace="Microsoft.Policies.SSLControl"/>
+		<using prefix="windows" namespace="Microsoft.Policies.Windows"/>
+	</policyNamespaces>
+	<resources minRequiredRevision="1.0" />
+	<categories>
+		<category name="SCHANNEL_POLICY" displayName="$(string.SCHANNEL_POLICY)">
+		   <parentCategory ref="windows:Network" />
+		</category>
+		<category name="Ciphers" displayName="$(string.CIPHERS)" >  
+		   <parentCategory ref="SCHANNEL_POLICY" />
+		</category>
+		<category name="Hashes_Security" displayName="$(string.HASHES)">
+		   <parentCategory ref="SCHANNEL_POLICY" />
+		</category>		
+		<category name="KeyExchangeAlgorithms_Security" displayName="$(string.KEY_EXCHANGE_ALGORITHMS)">
+			<parentCategory ref="SCHANNEL_POLICY" />
+		</category>
+		<category name="Protocols_Security" displayName="$(string.PROTOCOLS)">
+		   <parentCategory ref="SCHANNEL_POLICY" />
+		</category>	
+		<category name="SChannel_Logging" displayName="$(string.SCHANNEL_LOGGING)">
+		   <parentCategory ref="SCHANNEL_POLICY" />
+		</category>
+	</categories>
+	<policies>
+		<policy name="CIPHER_Enable_AES_128_128" 
+			class="Machine"
+			displayName="$(string.CIPHER_AES_128_128)"
+			explainText="$(string.CIPHER_AES_128_128_Help)"
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\AES 128/128"
+			valueName="Enabled">
+			<parentCategory ref="Ciphers" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<enabledValue>
+				<decimal value="4294967295" />
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="CIPHER_Enable_AES_256_256"
+			class="Machine"
+			displayName="$(string.CIPHER_AES_256_256)"
+			explainText="$(string.CIPHER_AES_256_256_Help)"
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\AES 256/256"
+			valueName="Enabled">
+			<parentCategory ref="Ciphers" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<enabledValue>
+				<decimal value="4294967295" />
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="CIPHER_Enable_DES_56_56" 
+			class="Machine"
+			displayName="$(string.CIPHER_DES_56_56)"
+			explainText="$(string.CIPHER_DES_56_56_Help)"
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\DES 56/56"
+			valueName="Enabled">
+			<parentCategory ref="Ciphers" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<enabledValue>
+				<decimal value="4294967295" />
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="CIPHER_Enable_NULL" 
+			class="Machine"
+			displayName="$(string.CIPHER_NULL)"
+			explainText="$(string.CIPHER_NULL_Help)"
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\NULL"
+			valueName="Enabled">
+			<parentCategory ref="Ciphers" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<enabledValue>
+				<decimal value="4294967295" />
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="CIPHER_Enable_RC2_128_128" 
+			class="Machine"
+			displayName="$(string.CIPHER_RC2_128_128)"
+			explainText="$(string.CIPHER_RC2_128_128_Help)"
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC2 128/128"
+			valueName="Enabled">
+			<parentCategory ref="Ciphers" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<enabledValue>
+				<decimal value="4294967295" />
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="CIPHER_Enable_RC2_40_128" 
+			class="Machine"
+			displayName="$(string.CIPHER_RC2_40_128)"
+			explainText="$(string.CIPHER_RC2_40_128_Help)"
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC2 40/128"
+			valueName="Enabled">
+			<parentCategory ref="Ciphers" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<enabledValue>
+				<decimal value="4294967295" />
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="CIPHER_Enable_RC2_56_128" 
+			class="Machine"
+			displayName="$(string.CIPHER_RC2_56_128)"
+			explainText="$(string.CIPHER_RC2_56_128_Help)"
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC2 56/128"
+			valueName="Enabled">
+			<parentCategory ref="Ciphers" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<enabledValue>
+				<decimal value="4294967295" />
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="CIPHER_Enable_RC4_128_128" 
+			class="Machine"
+			displayName="$(string.CIPHER_RC4_128_128)"
+			explainText="$(string.CIPHER_RC4_128_128_Help)"
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 128/128"
+			valueName="Enabled">
+			<parentCategory ref="Ciphers" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<enabledValue>
+				<decimal value="4294967295" />
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="CIPHER_Enable_RC4_40_128" 
+			class="Machine"
+			displayName="$(string.CIPHER_RC4_40_128)"
+			explainText="$(string.CIPHER_RC4_40_128_Help)"
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 40/128"
+			valueName="Enabled">
+			<parentCategory ref="Ciphers" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<enabledValue>
+				<decimal value="4294967295" />
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="CIPHER_Enable_RC4_56_128" 
+			class="Machine"
+			displayName="$(string.CIPHER_RC4_56_128)"
+			explainText="$(string.CIPHER_RC4_56_128_Help)"
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 56/128"
+			valueName="Enabled">
+			<parentCategory ref="Ciphers" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<enabledValue>
+				<decimal value="4294967295" />
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="CIPHER_Enable_RC4_64_128" 
+			class="Machine"
+			displayName="$(string.CIPHER_RC4_64_128)"
+			explainText="$(string.CIPHER_RC4_64_128_Help)"
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 64/128"
+			valueName="Enabled">
+			<parentCategory ref="Ciphers" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<enabledValue>
+				<decimal value="4294967295" />
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="CIPHER_Enable_TRIPLE_DES_168_168" 
+			class="Machine"
+			displayName="$(string.CIPHER_TRIPLE_DES_168_168)"
+			explainText="$(string.CIPHER_TRIPLE_DES_168_168_Help)"
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\Triple DES 168/168"
+			valueName="Enabled">
+			<parentCategory ref="Ciphers" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<enabledValue>
+				<decimal value="4294967295" />
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="HASH_Enable_MD5" 
+			class="Machine"
+			displayName="$(string.HASH_MD5)"
+			explainText="$(string.HASH_MD5_Help)"
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Hashes\MD5"
+			valueName="Enabled">
+			<parentCategory ref="Hashes_Security" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<enabledValue>
+				<decimal value="4294967295" />
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="HASH_Enable_SHA" 
+			class="Machine"
+			displayName="$(string.HASH_SHA)"
+			explainText="$(string.HASH_SHA_Help)"
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Hashes\SHA"
+			valueName="Enabled">
+			<parentCategory ref="Hashes_Security" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<enabledValue>
+				<decimal value="4294967295" />
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="HASH_Enable_SHA_256" 
+			class="Machine"
+			displayName="$(string.HASH_SHA_256)"
+			explainText="$(string.HASH_SHA_256_Help)"
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Hashes\SHA256"
+			valueName="Enabled">
+			<parentCategory ref="Hashes_Security" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<enabledValue>
+				<decimal value="4294967295" />
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="HASH_Enable_SHA_384" 
+			class="Machine"
+			displayName="$(string.HASH_SHA_384)"
+			explainText="$(string.HASH_SHA_384_Help)"
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Hashes\SHA384"
+			valueName="Enabled">
+			<parentCategory ref="Hashes_Security" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<enabledValue>
+				<decimal value="4294967295" />
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="HASH_Enable_SHA_512" 
+			class="Machine"
+			displayName="$(string.HASH_SHA_512)"
+			explainText="$(string.HASH_SHA_512_Help)"
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Hashes\SHA512"
+			valueName="Enabled">
+			<parentCategory ref="Hashes_Security" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<enabledValue>
+				<decimal value="4294967295" />
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="KEA_Enable_Diffie-Hellman" 
+			class="Machine" 
+			displayName="$(string.KEA_Diffie-Hellman)" 
+			explainText="$(string.KEA_Diffie-Hellman_Help)" 
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\Diffie-Hellman" 
+			valueName="Enabled">
+			<parentCategory ref="KeyExchangeAlgorithms_Security" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<enabledValue>
+				<decimal value="4294967295" />
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="KEA_Enable_ECDH" 
+			class="Machine"
+			displayName="$(string.KEA_ECDH)"
+			explainText="$(string.KEA_ECDH_Help)"
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\ECDH"
+			valueName="Enabled">
+			<parentCategory ref="KeyExchangeAlgorithms_Security" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<enabledValue>
+				<decimal value="4294967295" />
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="KEA_Enable_PKCS" 
+			class="Machine"
+			displayName="$(string.KEA_PKCS)"
+			explainText="$(string.KEA_PKCS_Help)"
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\PKCS"
+			valueName="Enabled">
+			<parentCategory ref="KeyExchangeAlgorithms_Security" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<enabledValue>
+				<decimal value="4294967295" />
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="PROTO_Enable_Multi_Protocol_Unified" 
+			class="Machine"
+			displayName="$(string.PROTO_MULTI_PROTOCOL_UNIFIED)"
+			explainText="$(string.PROTO_MULTI_PROTOCOL_UNIFIED_Help)"
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\Multi-Protocol Unified Hello\Server"
+			valueName="Enabled">
+			<parentCategory ref="Protocols_Security" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<enabledList>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\Multi-Protocol Unified Hello\Server"
+					valueName="Enabled">
+					<value>
+						<decimal value="4294967295" />
+					</value>
+				</item>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\Multi-Protocol Unified Hello\Server"
+					valueName="DisabledByDefault">
+					<value>
+						<decimal value="0" />
+					</value>
+				</item>
+			</enabledList>
+			<disabledList>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\Multi-Protocol Unified Hello\Server"
+					valueName="Enabled">
+					<value>
+						<decimal value="0" />
+					</value>
+				</item>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\Multi-Protocol Unified Hello\Server"
+					valueName="DisabledByDefault">
+					<value>
+						<decimal value="1" />
+					</value>
+				</item>
+			</disabledList>
+		</policy>
+		<policy name="PROTO_Enable_PCT_1_0" 
+			class="Machine"
+			displayName="$(string.PROTO_PCT_1_0)"
+			explainText="$(string.PROTO_PCT_1_0_Help)"
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\PCT 1.0\Server"
+			valueName="Enabled">
+			<parentCategory ref="Protocols_Security" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<enabledList>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\PCT 1.0\Server"
+					valueName="Enabled">
+					<value>
+						<decimal value="4294967295" />
+					</value>
+				</item>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\PCT 1.0\Server"
+					valueName="DisabledByDefault">
+					<value>
+						<decimal value="0" />
+					</value>
+				</item>
+			</enabledList>
+			<disabledList>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\PCT 1.0\Server"
+					valueName="Enabled">
+					<value>
+						<decimal value="0" />
+					</value>
+				</item>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\PCT 1.0\Server"
+					valueName="DisabledByDefault">
+					<value>
+						<decimal value="1" />
+					</value>
+				</item>
+			</disabledList>
+		</policy>
+		<policy name="PROTO_Enable_SSL_2_0" 
+			class="Machine"
+			displayName="$(string.PROTO_SSL_2_0)"
+			explainText="$(string.PROTO_SSL_2_0_Help)"
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Server"
+			valueName="Enabled">
+			<parentCategory ref="Protocols_Security" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<enabledList>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Server"
+					valueName="Enabled">
+					<value>
+						<decimal value="4294967295" />
+					</value>
+				</item>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Server"
+					valueName="DisabledByDefault">
+					<value>
+						<decimal value="0" />
+					</value>
+				</item>
+			</enabledList>
+			<disabledList>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Server"
+					valueName="Enabled">
+					<value>
+						<decimal value="0" />
+					</value>
+				</item>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Server"
+					valueName="DisabledByDefault">
+					<value>
+						<decimal value="1" />
+					</value>
+				</item>
+			</disabledList>
+		</policy>
+		<policy name="PROTO_Enable_SSL_3_0" 
+			class="Machine"
+			displayName="$(string.PROTO_SSL_3_0)"
+			explainText="$(string.PROTO_SSL_3_0_Help)"
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server"
+			valueName="Enabled">
+			<parentCategory ref="Protocols_Security" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<enabledList>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server"
+					valueName="Enabled">
+					<value>
+						<decimal value="4294967295" />
+					</value>
+				</item>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server"
+					valueName="DisabledByDefault">
+					<value>
+						<decimal value="0" />
+					</value>
+				</item>
+			</enabledList>
+			<disabledList>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server"
+					valueName="Enabled">
+					<value>
+						<decimal value="0" />
+					</value>
+				</item>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server"
+					valueName="DisabledByDefault">
+					<value>
+						<decimal value="1" />
+					</value>
+				</item>
+			</disabledList>
+		</policy>
+		<policy name="PROTO_Enable_TLS_1_0" 
+			class="Machine"
+			displayName="$(string.PROTO_TLS_1_0)"
+			explainText="$(string.PROTO_TLS_1_0_Help)"
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server"
+			valueName="Enabled">
+			<parentCategory ref="Protocols_Security" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<enabledList>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server"
+					valueName="Enabled">
+					<value>
+						<decimal value="4294967295" />
+					</value>
+				</item>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server"
+					valueName="DisabledByDefault">
+					<value>
+						<decimal value="0" />
+					</value>
+				</item>
+			</enabledList>
+			<disabledList>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server"
+					valueName="Enabled">
+					<value>
+						<decimal value="0" />
+					</value>
+				</item>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server"
+					valueName="DisabledByDefault">
+					<value>
+						<decimal value="1" />
+					</value>
+				</item>
+			</disabledList>
+		</policy>
+		<policy name="PROTO_Enable_TLS_1_1" 
+			class="Machine"
+			displayName="$(string.PROTO_TLS_1_1)"
+			explainText="$(string.PROTO_TLS_1_1_Help)"
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Server"
+			valueName="Enabled">
+			<parentCategory ref="Protocols_Security" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<enabledList>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Server"
+					valueName="Enabled">
+					<value>
+						<decimal value="4294967295" />
+					</value>
+				</item>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Server"
+					valueName="DisabledByDefault">
+					<value>
+						<decimal value="0" />
+					</value>
+				</item>
+			</enabledList>
+			<disabledList>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Server"
+					valueName="Enabled">
+					<value>
+						<decimal value="0" />
+					</value>
+				</item>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Server"
+					valueName="DisabledByDefault">
+					<value>
+						<decimal value="1" />
+					</value>
+				</item>
+			</disabledList>
+		</policy>
+		<policy name="PROTO_Enable_TLS_1_2" 
+			class="Machine"
+			displayName="$(string.PROTO_TLS_1_2)"
+			explainText="$(string.PROTO_TLS_1_2_Help)"
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server"
+			valueName="Enabled">
+			<parentCategory ref="Protocols_Security" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<enabledList>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server"
+					valueName="Enabled">
+					<value>
+						<decimal value="4294967295" />
+					</value>
+				</item>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server"
+					valueName="DisabledByDefault">
+					<value>
+						<decimal value="0" />
+					</value>
+				</item>
+			</enabledList>
+			<disabledList>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server"
+					valueName="Enabled">
+					<value>
+						<decimal value="0" />
+					</value>
+				</item>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server"
+					valueName="DisabledByDefault">
+					<value>
+						<decimal value="1" />
+					</value>
+				</item>
+			</disabledList>
+		</policy>
+		<policy name="SCHANNEL_Enable_LOGGING"
+			class="Machine"
+			displayName="$(string.SCHANNEL_LOGGING)"
+			explainText="$(string.SCHANNEL_LOGGING_Help)"
+			presentation="$(presentation.SchannelDropDownList)"
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL">
+			<parentCategory ref="SChannel_Logging" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<elements>
+				<enum id="SChannel_DropDownList_Box" valueName="EventLogging" required="true">
+					<item displayName="$(string.Schannel_DropDownList_NoLogging)">
+						<value>
+							<decimal value="0" />
+						</value>
+					</item>
+					<item displayName="$(string.Schannel_DropDownList_ErrorLogging)">
+						<value>
+							<decimal value="1" />
+						</value>
+					</item>
+					<item displayName="$(string.Schannel_DropDownList_WarnLogging)">
+						<value>
+							<decimal value="2" />
+						</value>
+					</item>
+					<item displayName="$(string.Schannel_DropDownList_InfoLogging)">
+						<value>
+							<decimal value="4" />
+						</value>
+					</item>
+				</enum>
+			</elements>
+		</policy>
+	</policies>
+</policyDefinitions>
