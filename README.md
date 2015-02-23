@@ -9,7 +9,7 @@ A Group Policy file (ADMX) that provides configuration of various SChannel optio
 
 Drop the ADMX and en-Us folder your SYSVOL share, e.g.:
 
-\\example.com\SYSVOL\example.com\Policies\PolicyDefinitions
+\\\example.com\SYSVOL\example.com\Policies\PolicyDefinitions
 
 You can then edit any Group Policy to add these settings. The SChannel settings are located at Computer Configuration\Poicies\Administrative Templates\Network\SChannel Configuration Settings\.
 
