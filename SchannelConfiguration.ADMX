@@ -363,10 +363,10 @@
 				</item>
 			</disabledList>
 		</policy>
-		<policy name="PROTO_Enable_PCT_1_0" 
+		<policy name="PROTO_Enable_PCT_1_0_Server" 
 			class="Machine"
-			displayName="$(string.PROTO_PCT_1_0)"
-			explainText="$(string.PROTO_PCT_1_0_Help)"
+			displayName="$(string.PROTO_PCT_1_0_Server)"
+			explainText="$(string.PROTO_PCT_1_0_Server_Help)"
 			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\PCT 1.0\Server"
 			valueName="Enabled">
 			<parentCategory ref="Protocols_Security" />
@@ -400,10 +400,10 @@
 				</item>
 			</disabledList>
 		</policy>
-		<policy name="PROTO_Enable_SSL_2_0" 
+		<policy name="PROTO_Enable_SSL_2_0_Server" 
 			class="Machine"
-			displayName="$(string.PROTO_SSL_2_0)"
-			explainText="$(string.PROTO_SSL_2_0_Help)"
+			displayName="$(string.PROTO_SSL_2_0_Server)"
+			explainText="$(string.PROTO_SSL_2_0_Server_Help)"
 			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Server"
 			valueName="Enabled">
 			<parentCategory ref="Protocols_Security" />
@@ -437,10 +437,10 @@
 				</item>
 			</disabledList>
 		</policy>
-		<policy name="PROTO_Enable_SSL_3_0" 
+		<policy name="PROTO_Enable_SSL_3_0_Server" 
 			class="Machine"
-			displayName="$(string.PROTO_SSL_3_0)"
-			explainText="$(string.PROTO_SSL_3_0_Help)"
+			displayName="$(string.PROTO_SSL_3_0_Server)"
+			explainText="$(string.PROTO_SSL_3_0_Server_Help)"
 			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server"
 			valueName="Enabled">
 			<parentCategory ref="Protocols_Security" />
@@ -474,10 +474,84 @@
 				</item>
 			</disabledList>
 		</policy>
-		<policy name="PROTO_Enable_TLS_1_0" 
+		<policy name="PROTO_Enable_SSL_2_0_Client" 
 			class="Machine"
-			displayName="$(string.PROTO_TLS_1_0)"
-			explainText="$(string.PROTO_TLS_1_0_Help)"
+			displayName="$(string.PROTO_SSL_2_0_Client)"
+			explainText="$(string.PROTO_SSL_2_0_Client_Help)"
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Client"
+			valueName="Enabled">
+			<parentCategory ref="Protocols_Security" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<enabledList>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Client"
+					valueName="Enabled">
+					<value>
+						<decimal value="4294967295" />
+					</value>
+				</item>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Client"
+					valueName="DisabledByDefault">
+					<value>
+						<decimal value="0" />
+					</value>
+				</item>
+			</enabledList>
+			<disabledList>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Client"
+					valueName="Enabled">
+					<value>
+						<decimal value="0" />
+					</value>
+				</item>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Client"
+					valueName="DisabledByDefault">
+					<value>
+						<decimal value="1" />
+					</value>
+				</item>
+			</disabledList>
+		</policy>
+		<policy name="PROTO_Enable_SSL_3_0_Client" 
+			class="Machine"
+			displayName="$(string.PROTO_SSL_3_0_Client)"
+			explainText="$(string.PROTO_SSL_3_0_Client_Help)"
+			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Client"
+			valueName="Enabled">
+			<parentCategory ref="Protocols_Security" />
+			<supportedOn ref="windows:SUPPORTED_ProductOnly" />
+			<enabledList>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Client"
+					valueName="Enabled">
+					<value>
+						<decimal value="4294967295" />
+					</value>
+				</item>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Client"
+					valueName="DisabledByDefault">
+					<value>
+						<decimal value="0" />
+					</value>
+				</item>
+			</enabledList>
+			<disabledList>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Client"
+					valueName="Enabled">
+					<value>
+						<decimal value="0" />
+					</value>
+				</item>
+				<item key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Client"
+					valueName="DisabledByDefault">
+					<value>
+						<decimal value="1" />
+					</value>
+				</item>
+			</disabledList>
+		</policy>
+		<policy name="PROTO_Enable_TLS_1_0_Server" 
+			class="Machine"
+			displayName="$(string.PROTO_TLS_1_0_Server)"
+			explainText="$(string.PROTO_TLS_1_0_Server_Help)"
 			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server"
 			valueName="Enabled">
 			<parentCategory ref="Protocols_Security" />
@@ -511,10 +585,10 @@
 				</item>
 			</disabledList>
 		</policy>
-		<policy name="PROTO_Enable_TLS_1_1" 
+		<policy name="PROTO_Enable_TLS_1_1_Server" 
 			class="Machine"
-			displayName="$(string.PROTO_TLS_1_1)"
-			explainText="$(string.PROTO_TLS_1_1_Help)"
+			displayName="$(string.PROTO_TLS_1_1_Server)"
+			explainText="$(string.PROTO_TLS_1_1_Server_Help)"
 			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Server"
 			valueName="Enabled">
 			<parentCategory ref="Protocols_Security" />
@@ -548,10 +622,10 @@
 				</item>
 			</disabledList>
 		</policy>
-		<policy name="PROTO_Enable_TLS_1_2" 
+		<policy name="PROTO_Enable_TLS_1_2_Server" 
 			class="Machine"
-			displayName="$(string.PROTO_TLS_1_2)"
-			explainText="$(string.PROTO_TLS_1_2_Help)"
+			displayName="$(string.PROTO_TLS_1_2_Server)"
+			explainText="$(string.PROTO_TLS_1_2_Server_Help)"
 			key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server"
 			valueName="Enabled">
 			<parentCategory ref="Protocols_Security" />
